@@ -11,8 +11,7 @@ logger = setup_logger("main")
 
 
 def main() -> None:
-    """Starts the chart pattern analysis message processing loop.
-    """
+    """Starts the chart pattern analysis message processing loop."""
     logger.info("Starting stock-tech-patterns processor...")
     try:
         consume_messages()

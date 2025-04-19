@@ -1,5 +1,4 @@
-"""Module to handle logging for Stock Tech Analysis Services.
-"""
+"""Module to handle logging for Stock Tech Analysis Services."""
 
 import logging
 
