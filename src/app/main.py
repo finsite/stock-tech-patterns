@@ -1,37 +1,26 @@
-from typing import Any  # ✅ Fixes the error
+"""Main application entry point for stock-tech-patterns.
+
+This module initializes logging and starts the message processing loop.
+"""
+
+from app.logger import setup_logger
+from app.queue_handler import consume_messages
+
+# Set up logger for this module
+logger = setup_logger("main")
 
 
-def add_numbers(a: int | float, b: int | float) -> int | float:
+def main() -> None:
+    """Starts the chart pattern analysis message processing loop.
     """
-    Adds two numbers and returns the result.
-
-    Args:
-        a (Union[int, float]): The first number.
-        b (Union[int, float]): The second number.
-
-    Returns:
-        Union[int, float]: The sum of the two numbers.
-    """
-    return a + b
+    logger.info("Starting stock-tech-patterns processor...")
+    try:
+        consume_messages()
+    except KeyboardInterrupt:
+        logger.info("Chart pattern processor stopped by user.")
+    except Exception as e:
+        logger.exception("Fatal error occurred: %s", str(e))
 
 
-class ExampleClass:
-    """A simple example class."""
-
-    def __init__(self, value: Any):
-        """
-        Initializes ExampleClass.
-
-        Args:
-            value (Any): The value to store.
-        """
-        self.value = value
-
-    def get_value(self) -> Any:
-        """
-        Retrieve the value assigned to the object.
-
-        Returns:
-            Any: The stored value.
-        """
-        return self.value
+if __name__ == "__main__":
+    main()
