@@ -4,4 +4,4 @@ name: stock-tech-patterns
 description: A Helm chart for stock-tech-patterns
 type: application
 version: 0.1.0
-appVersion: "1.0"
+appVersion: '1.0'
