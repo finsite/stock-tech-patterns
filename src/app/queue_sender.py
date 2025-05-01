@@ -40,12 +40,12 @@ if QUEUE_TYPE == "sqs":
 
 
 def publish_to_queue(payload: list[dict[str, Any]]) -> None:
-    """Publishes the processed stock analysis results to RabbitMQ or SQS.
+    """
+    Publishes the processed stock analysis results to RabbitMQ or SQS.
 
     Args:
     ----
         payload (list[dict]): A list of dictionaries representing processed results.
-
     """
     for message in payload:
         if QUEUE_TYPE == "rabbitmq":

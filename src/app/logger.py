@@ -4,7 +4,8 @@ import logging
 
 
 def setup_logger(name: str = "stock-tech") -> logging.Logger:
-    """Sets up a logger with a standard format and INFO level.
+    """
+    Sets up a logger with a standard format and INFO level.
 
     Args:
     ----
@@ -13,7 +14,6 @@ def setup_logger(name: str = "stock-tech") -> logging.Logger:
     Returns:
     -------
         logging.Logger: Configured logger.
-
     """
     logger = logging.getLogger(name)
 

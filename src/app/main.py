@@ -1,4 +1,5 @@
-"""Main application entry point for stock-tech-patterns.
+"""
+Main application entry point for stock-tech-patterns.
 
 This module initializes logging and starts the message processing loop.
 """

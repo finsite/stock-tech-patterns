@@ -1,7 +1,8 @@
-"""Module to handle output of analysis results to a chosen output target.
+"""
+Module to handle output of analysis results to a chosen output target.
 
-This implementation logs the result, prints to stdout,
-and optionally publishes to a message queue.
+This implementation logs the result, prints to stdout, and optionally publishes to a
+message queue.
 """
 
 import json
@@ -15,7 +16,8 @@ logger = setup_logger(__name__)
 
 
 def send_to_output(data: dict[str, Any]) -> None:
-    """Outputs processed analysis results to the configured output.
+    """
+    Outputs processed analysis results to the configured output.
 
     Currently logs the output, prints to the console,
     and publishes to a queue.
@@ -27,7 +29,6 @@ def send_to_output(data: dict[str, Any]) -> None:
     Returns:
     -------
         None
-
     """
     try:
         formatted_output = json.dumps(data, indent=4)

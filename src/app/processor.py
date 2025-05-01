@@ -1,4 +1,5 @@
-"""Module to process stock data for classic chart pattern detection.
+"""
+Module to process stock data for classic chart pattern detection.
 
 Includes detection of:
 - Double Top / Bottom
@@ -18,7 +19,8 @@ logger = setup_logger(__name__)
 
 
 def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
-    """Analyzes stock price data to detect classic chart patterns.
+    """
+    Analyzes stock price data to detect classic chart patterns.
 
     Args:
     ----
@@ -27,7 +29,6 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
     Returns:
     -------
         dict[str, Any]: Analysis result.
-
     """
     try:
         symbol = data.get("symbol", "UNKNOWN")
