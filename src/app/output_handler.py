@@ -1,8 +1,8 @@
 """
 Module to handle output of analysis results to a chosen output target.
 
-This implementation logs the result, prints to stdout, and optionally publishes to a
-message queue.
+This implementation logs the result, prints it to stdout, and sends the data to RabbitMQ
+or SQS.
 """
 
 import json
@@ -17,29 +17,22 @@ logger = setup_logger(__name__)
 
 def send_to_output(data: dict[str, Any]) -> None:
     """
-    Outputs processed analysis results to the configured output.
+    Outputs processed analysis results to the configured output system.
 
-    Currently logs the output, prints to the console,
-    and publishes to a queue.
+    This includes logging the result, printing to console, and
+    sending to RabbitMQ or SQS.
 
     Args:
-    ----
-        data (dict[str, Any]): The processed analysis result.
-
-    Returns:
-    -------
-        None
+        data (dict[str, any]): The processed analysis result.
     """
     try:
-        formatted_output = json.dumps(data, indent=4)
+        formatted_output: str = json.dumps(data, indent=4)
 
-        # Log the output
+        # Log and print
         logger.info("Sending data to output:\n%s", formatted_output)
-
-        # Print to stdout (useful in container logs)
         print(formatted_output)
 
-        # Publish to message queue
+        # Send to queue
         publish_to_queue([data])
 
     except Exception as e:

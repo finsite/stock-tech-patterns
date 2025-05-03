@@ -2,7 +2,6 @@
 
 import json
 import os
-from typing import Any
 
 import boto3
 import pika
@@ -13,13 +12,13 @@ from app.logger import setup_logger
 # Initialize logger
 logger = setup_logger(__name__)
 
-# Queue type
+# Get queue type from environment
 QUEUE_TYPE = os.getenv("QUEUE_TYPE", "rabbitmq").lower()
 
 # RabbitMQ config
 RABBITMQ_HOST = os.getenv("RABBITMQ_HOST", "localhost")
 RABBITMQ_EXCHANGE = os.getenv("RABBITMQ_EXCHANGE", "stock_analysis")
-RABBITMQ_ROUTING_KEY = os.getenv("RABBITMQ_ROUTING_KEY", "patterns")
+RABBITMQ_ROUTING_KEY = os.getenv("RABBITMQ_ROUTING_KEY", "candlestick")
 RABBITMQ_VHOST = os.getenv("RABBITMQ_VHOST", "/")
 RABBITMQ_USER = os.getenv("RABBITMQ_USER", "guest")
 RABBITMQ_PASSWORD = os.getenv("RABBITMQ_PASSWORD", "guest")
@@ -39,12 +38,11 @@ if QUEUE_TYPE == "sqs":
         sqs_client = None
 
 
-def publish_to_queue(payload: list[dict[str, Any]]) -> None:
+def publish_to_queue(payload: list[dict]) -> None:
     """
     Publishes the processed stock analysis results to RabbitMQ or SQS.
 
     Args:
-    ----
         payload (list[dict]): A list of dictionaries representing processed results.
     """
     for message in payload:
@@ -56,7 +54,7 @@ def publish_to_queue(payload: list[dict[str, Any]]) -> None:
             logger.error("Invalid QUEUE_TYPE specified. Use 'rabbitmq' or 'sqs'.")
 
 
-def _send_to_rabbitmq(data: dict[str, Any]) -> None:
+def _send_to_rabbitmq(data: dict) -> None:
     """Helper to send a message to RabbitMQ."""
     try:
         credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
@@ -80,7 +78,7 @@ def _send_to_rabbitmq(data: dict[str, Any]) -> None:
         logger.error("Failed to publish message to RabbitMQ: %s", e)
 
 
-def _send_to_sqs(data: dict[str, Any]) -> None:
+def _send_to_sqs(data: dict) -> None:
     """Helper to send a message to AWS SQS."""
     if not sqs_client or not SQS_QUEUE_URL:
         logger.error("SQS client is not initialized or missing SQS_QUEUE_URL")
