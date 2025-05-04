@@ -79,6 +79,15 @@ def _consume_rabbitmq() -> None:
     )
 
     def callback(ch, method, properties, body: bytes) -> None:
+        """Args:
+          ch:
+          method:
+          properties:
+          body: bytes:
+
+        Returns:
+
+        """
         try:
             message = json.loads(body)
             logger.info("Received message: %s", message)
