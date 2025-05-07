@@ -1,5 +1,4 @@
-"""
-Stock Tech Pattern Analysis Package.
+"""Stock Tech Pattern Analysis Package.
 
 This module provides the necessary components to:
 - Consume input data from a queue (SQS or RabbitMQ)
