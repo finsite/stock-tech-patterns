@@ -5,6 +5,12 @@
 - Fixing mkdocs template_python typo (Mark Quinn)
 - bump: patch version + changelog [skip ci] (github-actions[bot])
 
+## v0.2.3 (2025-05-07)
+
+### Fix
+
+- **test**: Disable pytest performance benchmark
+
 ## v0.2.2 (2025-05-07)
 
 ### Fix
