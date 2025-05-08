@@ -78,12 +78,15 @@ def _consume_rabbitmq() -> None:
     )
 
     def callback(ch, method, properties, body: bytes) -> None:
-        """Args:
-          ch:
-          method:
-          properties:
+        """
+
+        Args:
+          ch: 
+          method: 
+          properties: 
           body: bytes:
           body: bytes:
+          body: bytes: 
 
         Returns:
 

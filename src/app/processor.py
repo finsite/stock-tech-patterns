@@ -40,6 +40,11 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
 
     Returns:
 
+    Args:
+      data: dict[str:
+      Any]:
+
+    Returns:
     """
     try:
         symbol = data.get("symbol", "UNKNOWN")
