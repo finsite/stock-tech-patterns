@@ -1,14 +1,13 @@
-"""
-Module to publish processed analysis data to RabbitMQ or AWS SQS.
-"""
+"""Module to publish processed analysis data to RabbitMQ or AWS SQS."""
 
 import json
+
 import boto3
 import pika
 from botocore.exceptions import BotoCoreError, NoCredentialsError
 
-from app.logger import setup_logger
 from app import config
+from app.logger import setup_logger
 
 # Initialize logger
 logger = setup_logger(__name__)
@@ -18,7 +17,9 @@ def publish_to_queue(payload: list[dict]) -> None:
     """Publishes processed candlestick analysis results to RabbitMQ or SQS.
 
     Args:
+    ----
         payload (list[dict]): A list of message payloads to publish.
+
     """
     queue_type = config.get_queue_type()
 
@@ -35,12 +36,13 @@ def _send_to_rabbitmq(data: dict) -> None:
     """Sends a single message to RabbitMQ using config-based credentials.
 
     Args:
+    ----
         data (dict): The message payload to send.
+
     """
     try:
         credentials = pika.PlainCredentials(
-            config.get_rabbitmq_user(),
-            config.get_rabbitmq_password()
+            config.get_rabbitmq_user(), config.get_rabbitmq_password()
         )
         parameters = pika.ConnectionParameters(
             host=config.get_rabbitmq_host(),
@@ -67,7 +69,9 @@ def _send_to_sqs(data: dict) -> None:
     """Sends a single message to AWS SQS using the configured queue.
 
     Args:
+    ----
         data (dict): The message payload to send.
+
     """
     sqs_url = config.get_sqs_queue_url()
     region = config.get_sqs_region()

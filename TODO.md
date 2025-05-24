@@ -1,4 +1,4 @@
-# 📌 Project TODO: Stock-* Poller & Analysis Engine
+# 📌 Project TODO: Stock-\* Poller & Analysis Engine
 
 This TODO list outlines the remaining work to finalize the `stock-*` repositories, ensuring all pollers and processors are production-grade, consistent, and maintainable.
 
