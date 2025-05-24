@@ -21,8 +21,9 @@ contourpy==1.3.2
 cycler==0.12.1
     # via matplotlib
 fonttools==4.58.0
+fonttools==4.58.0
     # via matplotlib
-hvac==1.2.1
+hvac==2.3.0
     # via -r requirements.in
 idna==3.10
     # via requests
@@ -35,8 +36,9 @@ kiwisolver==1.4.8
 loguru==0.7.3
     # via -r requirements.in
 matplotlib==3.10.3
+matplotlib==3.10.3
     # via -r requirements.in
-numpy==1.26.4
+numpy==2.2.6
     # via
     #   -r requirements.in
     #   contourpy
@@ -70,6 +72,7 @@ requests==2.32.3
     #   hvac
 s3transfer==0.13.0
     # via boto3
+scipy==1.15.3
 scipy==1.15.3
     # via -r requirements.in
 six==1.17.0
