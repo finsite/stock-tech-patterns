@@ -5,6 +5,13 @@
 - Fixing mkdocs template_python typo (Mark Quinn)
 - bump: patch version + changelog [skip ci] (github-actions[bot])
 
+## v0.2.5 (2025-05-24)
+
+### Fix
+
+- **poller**: integrate updates
+- **poller**: integrate updates
+
 ## v0.2.4 (2025-05-08)
 
 ### Fix
