@@ -5,6 +5,12 @@
 - Fixing mkdocs template_python typo (Mark Quinn)
 - bump: patch version + changelog [skip ci] (github-actions[bot])
 
+## v0.3.0 (2025-05-24)
+
+### Feat
+
+- **versioning**: enforce version consistency across pyproject.toml, __init__.py, and changelog
+
 ## v0.2.5 (2025-05-24)
 
 ### Fix
