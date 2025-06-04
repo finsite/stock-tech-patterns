@@ -24,34 +24,6 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
     ----
         data (dict[str, Any]): Incoming stock data payload with 'data' key.
 
-    Returns:
-    -------
-        dict[str, Any]: Analysis result.
-
-    Args:
-    ----
-      data: dict[str:
-      Any]:
-
-    Returns:
-    -------
-
-    Args:
-    ----
-      data: dict[str:
-      Any]:
-
-    Returns:
-    -------
-
-    Args:
-    ----
-      data: dict[str:
-      Any]:
-
-    Returns:
-    -------
-
     Parameters
     ----------
     data :
@@ -62,13 +34,21 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
         param data: dict[str:
     Any :
 
-    data: dict[str :
+    data : dict[str :
 
     Any] :
+
+    data: dict[str :
 
 
     Returns
     -------
+    Args :
+
+    ----
+        data: dict[str:
+        Any]:
+
 
     """
     try:
