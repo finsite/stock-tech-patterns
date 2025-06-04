@@ -53,6 +53,7 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
     -------
 
     :param data: dict[str:
+    :param Any: param data: dict[str:
     :param Any: 
     :param data: dict[str: 
     :param Any]: 
