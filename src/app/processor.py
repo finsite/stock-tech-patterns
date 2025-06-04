@@ -19,44 +19,56 @@ logger = setup_logger(__name__)
 
 def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
     """Analyzes stock price data to detect classic chart patterns.
-    
+
     Args:
     ----
         data (dict[str, Any]): Incoming stock data payload with 'data' key.
-    
+
     Returns:
     -------
         dict[str, Any]: Analysis result.
-    
+
     Args:
     ----
       data: dict[str:
       Any]:
-    
-    Returns:
-    -------
-    
-    Args:
-    ----
-      data: dict[str:
-      Any]:
-    
-    Returns:
-    -------
-    
-    Args:
-    ----
-      data: dict[str:
-      Any]:
-    
+
     Returns:
     -------
 
-    :param data: dict[str:
-    :param Any: param data: dict[str:
-    :param Any: 
-    :param data: dict[str: 
-    :param Any]: 
+    Args:
+    ----
+      data: dict[str:
+      Any]:
+
+    Returns:
+    -------
+
+    Args:
+    ----
+      data: dict[str:
+      Any]:
+
+    Returns:
+    -------
+
+    Parameters
+    ----------
+    data :
+        dict[str:
+    Any :
+        param data: dict[str:
+    Any :
+        param data: dict[str:
+    Any :
+
+    data: dict[str :
+
+    Any] :
+
+
+    Returns
+    -------
 
     """
     try:
