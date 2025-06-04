@@ -27,15 +27,12 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
     :param data: dict[str:
     :param Any: param data: dict[str:
     :param Any: param data: dict[str:
-    :param Any: 
-    :param data: 
-    :type data: dict[str :
-    :param Any]: 
-    :param data: 
-    :type data: dict[str :
+    :param Any: param data:
+    :param Any: param data:
+    :param data: dict[str:
     :param data: dict[str: 
+    :param Any]: 
 
-    
     """
     try:
         symbol = data.get("symbol", "UNKNOWN")
