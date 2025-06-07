@@ -1,9 +1,8 @@
-# Changelog
+## v0.1.0 (2025-06-05)
 
-- Making sure Dockerfile is correct (Mark Quinn)
-- Merge branch 'main' of https://github.com/finsite/stock-tech-patterns (Mark Quinn)
-- Fixing mkdocs template_python typo (Mark Quinn)
-- bump: patch version + changelog [skip ci] (github-actions[bot])
+### Fix
+
+- **deps**: recompile requirements to resolve dependency conflicts
 
 ## v0.4.1 (2025-06-06)
 
@@ -38,45 +37,42 @@
 
 ## v0.3.1 (2025-06-03)
 
+## v0.3.0 (2025-05-24)
+
 ### Fix
 
 - **files**: Cleanup redundant files and standardize
 
-## v0.3.0 (2025-05-24)
+## v0.2.5 (2025-05-24)
 
 ### Feat
 
 - **versioning**: enforce version consistency across pyproject.toml, __init__.py, and changelog
 
-## v0.2.5 (2025-05-24)
-
 ### Fix
 
-- **poller**: integrate updates
 - **poller**: integrate updates
 
 ## v0.2.4 (2025-05-08)
 
 ### Fix
 
-- **docs**: Running docformatter to fix repos
+- **poller**: integrate updates
 
 ## v0.2.3 (2025-05-07)
 
 ### Fix
 
+- **docs**: Running docformatter to fix repos
 - **test**: Disable pytest performance benchmark
 
 ## v0.2.2 (2025-05-07)
-
-### Fix
-
-- **lint**: Fix pre-commit and disable pytest workflow
 
 ## v0.2.1 (2025-05-07)
 
 ### Fix
 
+- **lint**: Fix pre-commit and disable pytest workflow
 - **docker**: Fix workflow not getting version
 
 ## v0.2.0 (2025-05-06)
