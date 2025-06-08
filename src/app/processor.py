@@ -94,7 +94,7 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
             },
         }
 
-        send_to_output(result)
+        send_to_output([result])
         return result
 
     except Exception as e:
