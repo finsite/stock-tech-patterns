@@ -3,7 +3,7 @@
 This module initializes logging and starts the message processing loop.
 """
 
-from app.logger import setup_logger
+from app.utils.setup_logger import setup_logger
 from app.queue_handler import consume_messages
 
 # Set up logger for this module
