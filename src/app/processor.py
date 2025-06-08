@@ -11,8 +11,8 @@ import numpy as np
 import pandas as pd
 from scipy.signal import find_peaks
 
-from app.utils.setup_logger import setup_logger
 from app.output_handler import send_to_output
+from app.utils.setup_logger import setup_logger
 
 logger = setup_logger(__name__)
 
