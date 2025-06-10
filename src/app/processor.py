@@ -55,9 +55,7 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
         peaks, _ = find_peaks(close_prices)
         valleys, _ = find_peaks(-close_prices)
 
-        logger.info(
-            "Found %d peaks and %d valleys for %s", len(peaks), len(valleys), symbol
-        )
+        logger.info("Found %d peaks and %d valleys for %s", len(peaks), len(valleys), symbol)
 
         # Double Top Detection
         if len(peaks) >= 2:
@@ -100,9 +98,7 @@ def analyze_patterns(data: dict[str, Any]) -> dict[str, Any]:
         return result
 
     except Exception as e:
-        logger.exception(
-            "Pattern analysis failed for symbol %s", data.get("symbol", "UNKNOWN")
-        )
+        logger.exception("Pattern analysis failed for symbol %s", data.get("symbol", "UNKNOWN"))
         return {
             "symbol": data.get("symbol", "UNKNOWN"),
             "analysis_type": "chart_patterns",

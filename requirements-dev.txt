@@ -20,9 +20,9 @@ bandit==1.8.3
     # via -r requirements-dev.in
 black==24.10.0
     # via -r requirements-dev.in
-boto3==1.38.32
+boto3==1.38.33
     # via -r D:\git\stock-tech-patterns\requirements.in
-botocore==1.38.32
+botocore==1.38.33
     # via
     #   boto3
     #   s3transfer
@@ -56,13 +56,13 @@ colorama==0.4.6
     #   mkdocs-material
     #   pytest
     #   tqdm
-commitizen==4.8.2
+commitizen==4.8.3
     # via -r requirements-dev.in
 contourpy==1.3.2
     # via matplotlib
 coverage==7.8.2
     # via pytest-cov
-cryptography==45.0.3
+cryptography==45.0.4
     # via authlib
 cycler==0.12.1
     # via matplotlib
@@ -95,6 +95,8 @@ idna==3.10
     #   anyio
     #   httpx
     #   requests
+importlib-metadata==8.7.0
+    # via commitizen
 iniconfig==2.1.0
     # via pytest
 jinja2==3.1.6
@@ -251,7 +253,7 @@ questionary==2.1.0
     # via commitizen
 regex==2024.11.6
     # via nltk
-requests==2.32.3
+requests==2.32.4
     # via
     #   -r D:\git\stock-tech-patterns\requirements.in
     #   hvac
@@ -263,7 +265,7 @@ rich==14.0.0
     # via
     #   bandit
     #   typer
-ruamel-yaml==0.18.13
+ruamel-yaml==0.18.14
     # via
     #   safety
     #   safety-schemas
@@ -322,6 +324,8 @@ wcwidth==0.2.13
     # via prompt-toolkit
 win32-setctime==1.2.0
     # via loguru
+zipp==3.23.0
+    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
