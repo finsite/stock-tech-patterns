@@ -1,3 +1,9 @@
+## v0.6.0 (2025-06-29)
+
+### Feat
+
+- add SQLAlchemy and Tenacity to all repos with output dispatching and retry logic
+
 ## v0.5.0 (2025-06-22)
 
 ### Feat
