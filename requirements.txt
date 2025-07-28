@@ -74,7 +74,7 @@ requests==2.32.4
     #   hvac
 s3transfer==0.13.1
     # via boto3
-scipy==1.16.0
+scipy==1.16.1
     # via -r requirements.in
 six==1.17.0
     # via python-dateutil
