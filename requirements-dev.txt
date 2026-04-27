@@ -258,7 +258,7 @@ questionary==2.1.0
     # via commitizen
 regex==2024.11.6
     # via nltk
-requests==2.32.4
+requests==2.33.0
     # via
     #   -r D:\git\stock-tech-patterns\requirements.in
     #   -r requirements-dev.in
