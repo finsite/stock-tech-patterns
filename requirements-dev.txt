@@ -10,7 +10,7 @@ anyio==4.9.0
     # via httpx
 argcomplete==3.6.2
     # via commitizen
-authlib==1.6.1
+authlib==1.6.12
     # via safety
 babel==2.17.0
     # via mkdocs-material
